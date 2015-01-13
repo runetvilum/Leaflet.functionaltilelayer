@@ -25,7 +25,7 @@ L.TileLayer.Functional = L.TileLayer.extend({
       height: tileSize,
       zoom: zoom,
       tile: {
-        row: this.options.tms ? this._tileNumBounds.max.y - tilePoint.y : tilePoint.y,
+        row: tilePoint.y, //this.options.tms ? this._tileNumBounds.max.y - tilePoint.y : tilePoint.y,
         column: tilePoint.x
       },
       subdomain: this._getSubdomain(tilePoint)
